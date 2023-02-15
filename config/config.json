@@ -1,0 +1,15 @@
+{
+   
+    "serverAddress": "0.0.0.0",    
+    "TCPPort":10000,
+	  "UDPPort":19162,	  
+    "socketPort": 10000,
+    "receiveBuffer": 512,
+    "httpPort": 4000,
+    "serverStatusPath": "/server/status",
+    "apiSvrReadTimeOut": 5000,
+    "apiSvrWriteTimeOut": 5000,
+    "rateLimitPerSecond": 1,
+    "rateLimitBuffer": 5,
+    "webRoot": "./webPage"
+  }  
