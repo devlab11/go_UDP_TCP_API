@@ -54,45 +54,8 @@ func (server *UDPServer) CreateListener() (*UDPServer) {
 		buf := make([]byte, 4096)
 		n, clientAddr, err := conn.ReadFromUDP(buf)
 		if err != nil {
-			log.Fatal("Error with reading UDP connection", err.Error())
-			
+			log.Fatal("Error with reading UDP connection", err.Error())			
 		}		
-		log.Println("Received UDP packet:", hex.EncodeToString(buf[0:n]), "to the ", server.Connection.LocalAddr().String(), clientAddr)
-		//server.onPacket(server)
+		log.Println("Received UDP packet:", hex.EncodeToString(buf[0:n]), "to the ", server.Connection.LocalAddr().String(), clientAddr)	
 	}
 }
-
-// func (server *UDPServer) Listen() {	
-// 	for {
-// 		buf := make([]byte, 4096)
-// 		n, clientAddr, err := server.Connection.ReadFromUDP(buf)
-// 		if err != nil {
-// 			log.Fatal("Error with reading UDP connection", err.Error())
-// 			return
-// 		}		
-// 		log.Println("Received UDP packet:", hex.EncodeToString(buf[0:n]), "to the ", server.Connection.LocalAddr().String())
-// 		//server.onPacket(server)
-// 	}		
-// }
-
-
-// func Response(udpServer net.PacketConn, addr G_UDPServer.Host, buf []byte) {
-// 	time := time.Now().Format(time.ANSIC)
-// 	responseStr := fmt.Sprintf("time received: %v. Your message: %v!", time, string(buf))
-
-// 	udpServer.WriteTo([]byte(responseStr), addr)
-// }
-
-// func doReceiveMessage(conn net.Conn) {
-// 	var (
-// 		sess 		 *Session
-// 		sessinfo	 SessionInfo
-// 		sessionId 	 string
-// 		readChannel  chan []byte
-// 		writeChannel chan *channelData
-// 		readData     []byte
-// 		passData     *channelData
-// 	)
-
-// 	G_UDPServer.Connects[conn.RemoteAddr().String()] = 0
-// }

@@ -20,9 +20,9 @@ func initArgs() {
 
 func main() {
 	var (
-		err    error
-		//apiSvr *server.ApiServer
+		err    error		
 	)
+
 	initArgs()
     fmt.Println("init Args!")
 
@@ -35,11 +35,7 @@ func main() {
 	server.InitUDPServer()
 	log.Println("Initial UDP server success")
 
-	// apiSvr = server.InitApiServer()
-	// log.Println("Initial API server success")
-
 	go server.G_UDPServer.CreateListener()
-	//go server.G_UDPServer.Listen()
 
 	for {
 		time.Sleep(1*time.Second)

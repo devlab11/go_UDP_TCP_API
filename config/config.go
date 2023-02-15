@@ -9,14 +9,8 @@ import (
 type Config struct {
 	ServerAddress      string `json:"serverAddress"`
 	UDPPort			   int	  `json:"UDPPort"`
-	HttpPort           int    `json:"httpPort"`
-	// ServerStatusPath   string `json:"serverStatusPath"`
-	// ReceiveBuffer      int    `json:"receiveBuffer"`
-	// ApiSvrReadTimeOut  int    `json:"apiSvrReadTimeOut"`
-	// ApiSvrWriteTimeOut int    `json:"apiSvrWriteTimeOut"`
-	// RateLimitPerSecond int    `json:"rateLimitPerSecond"`
-	// RateLimitBuffer    int    `json:"rateLimitBuffer"`
-	// WebRoot            string `json:"webRoot"`
+	TCPPort           int    `json:"TCPPort"`
+
 }
 
 var (
